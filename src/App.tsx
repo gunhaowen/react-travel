@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./App.module.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
 import {
   HomePage,
   SingInPage,
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/singIn" element={<SingInPage />} />
@@ -56,7 +56,7 @@ function App() {
           />
           <Route path="*" element={<h1>404 not found </h1>} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
